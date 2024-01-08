@@ -9,6 +9,7 @@ module com.example.quizit {
     requires org.kordamp.ikonli.javafx;
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
+    requires lombok;
 
     opens com.example.quizit to javafx.fxml;
     exports com.example.quizit;
