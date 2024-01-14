@@ -9,4 +9,8 @@ public class Player {
     private int id;
     private int score;
     private int name;
+
+    public int getScore() {
+        return score;
+    }
 }

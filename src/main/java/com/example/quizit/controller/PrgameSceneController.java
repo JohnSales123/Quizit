@@ -15,7 +15,7 @@ public class PrgameSceneController {
     private Parent root;
 /*
     public void startGame(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScreen.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));
         root = loader.load();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(root);
