@@ -8,5 +8,5 @@ import lombok.Data;
 public class Question {
     private int id;
     private String question;
-    private String category;
+    private String category; //"Mathe"
 }

@@ -11,6 +11,9 @@ module com.example.quizit {
     requires com.almasb.fxgl.all;
     requires lombok;
 
+
     opens com.example.quizit to javafx.fxml;
+    opens com.example.quizit.controller to javafx.fxml;
+
     exports com.example.quizit;
 }
