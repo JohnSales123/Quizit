@@ -17,14 +17,10 @@ public class WelcomeSceneController {
 
     @FXML
     public void startGame(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScreen.fxml"));
-        root = loader.load();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-
-        //PrgameSceneController pregameSceneController = loader.getController();
-
-        scene = new Scene(root);
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));
+    root = loader.load();
+    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-    }
-}
+}}

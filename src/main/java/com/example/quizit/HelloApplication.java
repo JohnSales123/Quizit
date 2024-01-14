@@ -14,9 +14,10 @@ import java.util.List;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("WelcomeScene.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("WelcomeScene2.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 900, 550);
         stage.setFullScreen(true);
+        stage.setMaximized(true);
         stage.setTitle("Quizit");
         stage.setScene(scene);
         stage.show();
@@ -27,12 +28,14 @@ public class HelloApplication extends Application {
 
         List<Question> geographie = newQuiz.getQuestionToCategory("Geografie");
 
-        for (Question question: geographie) {
+        for (Question question : geographie) {
             System.out.println("Frage: " + question);
 
             System.out.println("Antworten:");
             System.out.println(newQuiz.getAnswerMap());
 
+
         launch();
     }
+
 }}

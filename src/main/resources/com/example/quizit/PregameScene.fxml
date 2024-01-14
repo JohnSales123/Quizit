@@ -41,17 +41,17 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
   <children>
     <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-        <Label alignment="CENTER" layoutX="39.0" layoutY="45.0" style="&#10;" text="Katekorien" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+        <Label alignment="CENTER" layoutX="39.0" layoutY="45.0" style="&#10;" text="Kategorien" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
           <font>
             <Font size="18.0" />
           </font>
         </Label>
             <CheckBox layoutX="37.0" layoutY="86.0" mnemonicParsing="false" text="Mathe" />
-            <Button layoutX="545.0" layoutY="339.0" mnemonicParsing="false" text="Start game" textFill="#349938" />
+            <Button fx:id="startGameCat" layoutX="545.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToQuestionScene" text="Start game" textFill="#349938" />
             <Label alignment="CENTER" layoutX="479.0" layoutY="59.0" style="&#10;" text="Timer" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
                <font>
                   <Font size="18.0" />

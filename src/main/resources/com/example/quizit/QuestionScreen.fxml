@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
    <children>
       <GridPane layoutX="60.0" layoutY="249.0" prefHeight="119.0" prefWidth="479.0">
         <columnConstraints>
@@ -27,11 +27,11 @@
       </GridPane>
       <AnchorPane layoutX="-1.0" prefHeight="243.0" prefWidth="606.0">
          <children>
-            <Label fx:id="question" alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="46.0" prefHeight="151.0" prefWidth="479.0" text="FRAGE" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"/>
-            <Label layoutX="562.0" layoutY="18.0" prefHeight="17.0" prefWidth="30.0" text="NR." style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"/>
-            <Label layoutX="474.0" layoutY="197.0" prefHeight="17.0" prefWidth="68.0" text="Kategorie" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"/>
-            <Label layoutX="13.0" layoutY="213.0" prefHeight="25.0" prefWidth="55.0" text="PUNKTE" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;"/>
-            <Button layoutX="7.0" layoutY="6.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="154.0" text="Zurück zu den Kateogrien" />
+            <Label fx:id="question" alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="46.0" prefHeight="151.0" prefWidth="479.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" text="FRAGE" />
+            <Label layoutX="562.0" layoutY="18.0" prefHeight="17.0" prefWidth="30.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" text="NR." />
+            <Label layoutX="474.0" layoutY="197.0" prefHeight="17.0" prefWidth="68.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" text="Kategorie" />
+            <Label layoutX="13.0" layoutY="213.0" prefHeight="25.0" prefWidth="55.0" style=" -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid;" text="PUNKTE" />
+            <Button fx:id="backToCategories" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="25.0" prefWidth="154.0" text="Zurück zu den Kateogrien" />
          </children>
       </AnchorPane>
       <Button layoutX="539.0" layoutY="368.0" mnemonicParsing="false" text="Submit" />
