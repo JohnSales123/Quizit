@@ -11,8 +11,34 @@ import java.util.List;
 public class DataRepository {
 
     public List<Anwser> _anwsers = new ArrayList<>();
-    public List<Question> _questions = new ArrayList<>();
+    public ArrayList<Question> _questions = new ArrayList<>();
     public List<Player> _players = new ArrayList<>();
+
+    public ArrayList<Question> geographyPool = new ArrayList<>();
+    public ArrayList<Question> mathsPool = new ArrayList<>();
+    public ArrayList<Question> historyPool = new ArrayList<>();
+    public ArrayList<Question> biologyPool = new ArrayList<>();
+    public ArrayList<Question> physicsPool = new ArrayList<>();
+    public static ArrayList<Question> fullPool = new ArrayList<>();
+    public static ArrayList<Question> literaturePool = new ArrayList<>();
+
+    public static void LiteratureLoader(){
+        Question temp = new Question();
+        temp.setQuestion("Wer schrieb das Buch namens Faust?");
+        temp.setCorrectAnswer("Johann Wolfgang von Goethe");
+        temp.setWrongAnswer1("Thomas Brezina");
+        temp.setWrongAnswer2("Friedrich Schiller");
+        temp.setWrongAnswer3("Heinrich Heine");
+        fullPool.add(temp);
+        temp.setQuestion("Welcher der folgenden ist keine literarische Epoche?");
+        temp.setCorrectAnswer("Rassismus");
+        temp.setWrongAnswer1("Realismus");
+        temp.setWrongAnswer2("Expressionismus");
+        temp.setWrongAnswer3("Romantik");
+        fullPool.add(temp);
+
+
+    }
 
     public DataRepository(){
         _anwsers = fetchAnwsersfromDB();

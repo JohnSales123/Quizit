@@ -1,3 +1,4 @@
+/*
 package com.example.quizit.model;
 
 import java.util.HashMap;
@@ -17,9 +18,9 @@ public class QAManagement {
 
     private void initalizeQA() {
         Answer answer1o1 = new Answer(1, "Wien", true);          //stattdessen den Antworten qid zuordnen
-        Answer answer2o1 = new Answer(2, "Rom", false);          //und Frage mit allen passenden Antworten auspielen
-        Answer answer3o1 = new Answer(3, "England", false);
-        Answer answer4o1 = new Answer(4, "Sydney", false);
+        Answer answer2o1 = new Answer(1, "Rom", false);          //und Frage mit allen passenden Antworten auspielen
+        Answer answer3o1 = new Answer(1, "England", false);
+        Answer answer4o1 = new Answer(1, "Sydney", false);
 
         List<Answer> answerList1 = List.of(answer1o1, answer2o1, answer3o1, answer4o1);
         Question question1 = new Question(1, "Was ist die Hauptstadt Österreichs?", answerList1, "Geografie");
@@ -44,3 +45,4 @@ public class QAManagement {
         return answerMap;
     }
 }
+*/

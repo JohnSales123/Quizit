@@ -12,7 +12,7 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
             <children>
-                <Label alignment="CENTER" layoutX="153.0" layoutY="120.0" style="&#10;" text="Wilkommen bei Quizit!" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
+                <Label alignment="CENTER" layoutX="149.0" layoutY="120.0" style="&#10;" text="Willkommen bei Quizit!" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
                     <font>
                         <Font size="33.0" />
                     </font>
