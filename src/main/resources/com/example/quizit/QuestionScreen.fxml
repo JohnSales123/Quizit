@@ -15,10 +15,10 @@
           <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="answer3" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 3" GridPane.rowIndex="1" />
-            <Button fx:id="answer2" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 2" GridPane.columnIndex="1" />
-            <Button fx:id="answer4" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="answer1" mnemonicParsing="false" prefHeight="57.0" prefWidth="240.0" text="Antwortmöglichkeit 1" />
+            <Button fx:id="answer1" mnemonicParsing="false" onAction="#saveAnswer1" prefHeight="57.0" prefWidth="240.0" text="Antwortmöglichkeit 1" />
+            <Button fx:id="answer3" mnemonicParsing="false" onAction="#saveAnswer3" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 3" GridPane.rowIndex="1" />
+            <Button fx:id="answer2" mnemonicParsing="false" onAction="#saveAnswer2" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 2" GridPane.columnIndex="1" />
+            <Button fx:id="answer4" mnemonicParsing="false" onAction="#saveAnswer4" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
          </children>
       </GridPane>
       <AnchorPane layoutX="-1.0" prefHeight="243.0" prefWidth="606.0">
