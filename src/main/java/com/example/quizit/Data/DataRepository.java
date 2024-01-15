@@ -25,17 +25,22 @@ public class DataRepository {
     public static void LiteratureLoader(){
         Question temp = new Question();
         temp.setQuestion("Wer schrieb das Buch namens Faust?");
-        temp.setCorrectAnswer("Johann Wolfgang von Goethe");
-        temp.setWrongAnswer1("Thomas Brezina");
-        temp.setWrongAnswer2("Friedrich Schiller");
-        temp.setWrongAnswer3("Heinrich Heine");
+        temp.getAnswers().add("Johann Wolfgang von Goethe");            //correct answer first!!
+        temp.getAnswers().add("Thomas Brezina");
+        temp.getAnswers().add("Friedrich Schiller");
+        temp.getAnswers().add("Heinrich Heine");
         fullPool.add(temp);
+
+        //copy following for new question:
+        temp = new Question();
         temp.setQuestion("Welcher der folgenden ist keine literarische Epoche?");
-        temp.setCorrectAnswer("Rassismus");
-        temp.setWrongAnswer1("Realismus");
-        temp.setWrongAnswer2("Expressionismus");
-        temp.setWrongAnswer3("Romantik");
+        temp.getAnswers().add("Rassismus");
+        temp.getAnswers().add("Realismus");
+        temp.getAnswers().add("Expressionismus");
+        temp.getAnswers().add("Romantik");
         fullPool.add(temp);
+
+
 
 
     }

@@ -18,7 +18,7 @@
             <Button fx:id="answer3" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 3" GridPane.rowIndex="1" />
             <Button fx:id="answer2" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 2" GridPane.columnIndex="1" />
             <Button fx:id="answer4" mnemonicParsing="false" prefHeight="56.0" prefWidth="239.0" text="Antwortmöglichkeit 4" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-            <Button fx:id="answer1" mnemonicParsing="false" prefHeight="25.0" prefWidth="271.0" text="Button" />
+            <Button fx:id="answer1" mnemonicParsing="false" prefHeight="57.0" prefWidth="240.0" text="Antwortmöglichkeit 1" />
          </children>
       </GridPane>
       <AnchorPane layoutX="-1.0" prefHeight="243.0" prefWidth="606.0">
@@ -30,7 +30,7 @@
             <Button fx:id="backToCategories" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="25.0" prefWidth="154.0" text="Zurück zu den Kateogrien" />
          </children>
       </AnchorPane>
-      <Button fx:id="next" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#loadNextQuestion" text="Next" />
+      <Button fx:id="next" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#switchToQuestionScene" text="Next" />
       <Button fx:id="submit" layoutX="539.0" layoutY="368.0" mnemonicParsing="false" onAction="#checkAnswer" text="Submit" />
    </children>
 </AnchorPane>

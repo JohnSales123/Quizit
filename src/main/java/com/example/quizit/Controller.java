@@ -19,25 +19,19 @@ public class Controller {
     private Question currentQuestion;
     private Scene scene;
     private Parent root;
+    boolean firstLoad = true;
     private int answerID;
     @FXML
     private Button submit;
     @FXML
     private Button next;
-    @FXML
-    public Button answer1;
-    @FXML
-    public Button answer2;
-    @FXML
-    public Button answer3;
-    @FXML
-    public Button answer4;
+
 
     @FXML
     public void switchToCategories(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));
         root = loader.load();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -46,32 +40,37 @@ public class Controller {
     public void switchToQuestionScene(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("QuestionScreen.fxml"));
         root = loader.load();
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         DataRepository.LiteratureLoader();
-        loadNextQuestion(event);
+        if (firstLoad) {
+            loadNextQuestion(event);
+        }
     }
 
     public void checkAnswer(ActionEvent event) throws IOException {
         submit.setVisible(false);
     }
 
-    public void loadNextQuestion(ActionEvent event) throws IOException{
+    public void loadNextQuestion(ActionEvent event) throws IOException {
+        System.out.println(root);
         SecureRandom rand = new SecureRandom();
         int questionID = rand.nextInt(DataRepository.fullPool.size());
         currentQuestion = DataRepository.fullPool.get(questionID);
-        answer1.setText("HUnd");
+        int questionSelect;
 
+        for (int i = 0; i < 4; i++) {
+            questionSelect = rand.nextInt(4 - i);
+            Button b = (Button) root.lookup("#answer" + (i + 1));
+            b.setText(currentQuestion.getAnswers().get(questionSelect));
+            currentQuestion.getAnswers().remove(questionSelect);
+        }
+        if (!firstLoad) {
+            switchToCategories(event);
+        } else {
+            firstLoad = false;
+        }
     }
-
-
-
-
-
-
-
-
-
 }
