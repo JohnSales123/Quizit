@@ -3,7 +3,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
    <children>
       <GridPane layoutX="60.0" layoutY="249.0" prefHeight="119.0" prefWidth="479.0">
         <columnConstraints>
@@ -30,7 +30,7 @@
             <Button fx:id="backToCategories" layoutX="7.0" layoutY="6.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="25.0" prefWidth="154.0" text="Zurück zu den Kateogrien" />
          </children>
       </AnchorPane>
-      <Button fx:id="next" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#switchToQuestionScene" text="Next" />
+      <Button fx:id="next" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#loadNextQuestion" text="Next" />
       <Button fx:id="submit" layoutX="539.0" layoutY="368.0" mnemonicParsing="false" onAction="#checkAnswer" text="Submit" />
    </children>
 </AnchorPane>

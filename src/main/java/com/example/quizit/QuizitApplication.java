@@ -14,9 +14,9 @@ public class QuizitApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizitApplication.class.getResource("WelcomeScene.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 550);
-        stage.setFullScreen(true);
-        stage.setMaximized(true);
+        Scene scene = new Scene(fxmlLoader.load(), 640, 400);
+        stage.setFullScreen(false);
+        stage.setMaximized(false);
         stage.setTitle("Quizit");
         stage.setScene(scene);
         stage.show();
