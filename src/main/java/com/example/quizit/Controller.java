@@ -20,14 +20,13 @@ public class Controller {
     private Question currentQuestion;
     private Scene scene;
     private Parent root;
-    public String correctAnswer;
-    public String selectedAnswer;
+    public String correctAnswer = "";
+    public String selectedAnswer = "";
+    public static int questionNumber = 0;
     @FXML
     private Button submit;
     @FXML
     private Button next;
-    @FXML
-    private Label question;
     @FXML
     private Button answer1;
     @FXML
@@ -36,6 +35,10 @@ public class Controller {
     private Button answer3;
     @FXML
     private Button answer4;
+    @FXML
+    private Label numberOfQuestion;
+    @FXML
+    private Label points;
 
 
     @FXML
@@ -49,34 +52,45 @@ public class Controller {
     }
 
     public void switchToQuestionScene(ActionEvent event) throws IOException {
+        questionNumber++;
         FXMLLoader loader = new FXMLLoader(getClass().getResource("QuestionScreen.fxml"));
         root = loader.load();
+        Controller controller = loader.getController();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
         DataRepository.LiteratureLoader();
             loadNextQuestion(event);
+        controller.numberOfQuestion.setText(String.valueOf(questionNumber));
+            if(questionNumber == 11){
+                questionNumber = 0;
+                switchToEndScene();
+            }
+    }
+
+    public void switchToEndScene() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScene.fxml"));    //placeholder for End Scene
+        root = loader.load();
+        scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
     public void checkAnswer(ActionEvent event) throws IOException {             //TODO: Fix Correct Answer isn't saved
         submit.setVisible(false);
-        System.out.println("Selected Answer: \n" + selectedAnswer);
-        System.out.println("Correct Answer: \n" + correctAnswer);
-        if(answer1.getText() == (correctAnswer)){
+        if(answer1.getText().equals(correctAnswer)){
             answer1.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer2.getText() == (correctAnswer)){
+        if(answer2.getText().equals(correctAnswer)){
             answer2.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer3.getText() == (correctAnswer)){
+        if(answer3.getText().equals(correctAnswer)){
             answer3.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer4.getText() == (correctAnswer)){
+        if(answer4.getText().equals(correctAnswer)){
             answer4.setStyle("-fx-background-color: #6DFA76;");
         }
-        System.out.println("Button outputs:\n" + answer1.getText() + "\n" + answer2.getText() + "\n" + answer3.getText() + "\n" + answer4.getText() );
-
     }
 
     public void saveAnswer1(ActionEvent event) throws IOException{
@@ -108,6 +122,5 @@ public class Controller {
             currentQuestion.getAnswers().remove(questionSelect);
         }
         DataRepository.fullPool.remove(questionID);
-        System.out.println("LOADNEXTQUESTION CORR ANSWER: \n"+ correctAnswer);
     }
 }

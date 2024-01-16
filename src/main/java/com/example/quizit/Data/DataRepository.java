@@ -40,7 +40,6 @@ public class DataRepository {
         temp.getAnswers().add("Romantik");
         fullPool.add(temp);
 
-
         temp = new Question();
         temp.setQuestion("Welches Werk stammt von William Shakespeare?");
         temp.getAnswers().add("Romeo und Julia");
