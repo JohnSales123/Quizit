@@ -26,8 +26,6 @@ public class Controller {
     @FXML
     private Button submit;
     @FXML
-    private Button next;
-    @FXML
     private Button answer1;
     @FXML
     private Button answer2;
@@ -35,8 +33,6 @@ public class Controller {
     private Button answer3;
     @FXML
     private Button answer4;
-    @FXML
-    private Label points;
 
 
     @FXML
@@ -47,20 +43,22 @@ public class Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        questionNumber = 0;
     }
+
     @FXML
     public void switchToQuestionScene(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("QuestionScreen.fxml"));
         root = loader.load();
-        Controller controller = loader.getController();
-        controller.setRoot(root);
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        DataRepository.LiteratureLoader();
-            loadNextQuestion(event);
+        System.out.println("SWITCHTOQUESTION" + this);
+        DataRepository.geographyLoader();          //TODO: unterschiedliche Kategorien laden je nach Auswahl (mehrere sollen möglich sein)
+        loadNextQuestion(event);
     }
+
     @FXML
     public void switchToEndScene() throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScene.fxml"));    //placeholder for End Scene
@@ -70,35 +68,35 @@ public class Controller {
         stage.show();
     }
 
-    public void checkAnswer(ActionEvent event) throws IOException {             //TODO: Fix: Correct Answer isn't saved
+    public void checkAnswer(ActionEvent event) throws IOException {                     //TODO: creates new Object on "submit" button 1st time - why?/different Object for first question
         submit.setVisible(false);
-        System.out.println("CHECK" + correctAnswer);
-        if(answer1.getText().equals(correctAnswer)){
+        System.out.println("CHECK" + this);
+        if (answer1.getText().equals(correctAnswer)) {
             answer1.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer2.getText().equals(correctAnswer)){
+        if (answer2.getText().equals(correctAnswer)) {
             answer2.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer3.getText().equals(correctAnswer)){
+        if (answer3.getText().equals(correctAnswer)) {
             answer3.setStyle("-fx-background-color: #6DFA76;");
         }
-        if(answer4.getText().equals(correctAnswer)){
+        if (answer4.getText().equals(correctAnswer)) {
             answer4.setStyle("-fx-background-color: #6DFA76;");
         }
     }
 
-    public void removeBackgroundColor() throws IOException{
-        Button ans1 = (Button)root.lookup("#answer1");
+    public void removeBackgroundColor() throws IOException {
+        Button ans1 = (Button) root.lookup("#answer1");
         ans1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
-        Button ans2 = (Button)root.lookup("#answer2");
+        Button ans2 = (Button) root.lookup("#answer2");
         ans2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
-        Button ans3 = (Button)root.lookup("#answer3");
+        Button ans3 = (Button) root.lookup("#answer3");
         ans3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
-        Button ans4 = (Button)root.lookup("#answer4");
+        Button ans4 = (Button) root.lookup("#answer4");
         ans4.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
     }
 
-    public void saveAnswer1(ActionEvent event) throws IOException{
+    public void saveAnswer1(ActionEvent event) throws IOException {
         selectedAnswer = answer1.getText();
         answer1.setStyle("-fx-background-color: #A2C3FA;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
@@ -106,21 +104,23 @@ public class Controller {
         answer4.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
     }
 
-    public void saveAnswer2(ActionEvent event) throws IOException{
+    public void saveAnswer2(ActionEvent event) throws IOException {
         selectedAnswer = answer2.getText();
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: #A2C3FA;");
         answer3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer4.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
     }
-    public void saveAnswer3(ActionEvent event) throws IOException{
+
+    public void saveAnswer3(ActionEvent event) throws IOException {
         selectedAnswer = answer3.getText();
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer3.setStyle("-fx-background-color: #A2C3FA;");
         answer4.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
     }
-    public void saveAnswer4(ActionEvent event) throws IOException{
+
+    public void saveAnswer4(ActionEvent event) throws IOException {
         selectedAnswer = answer4.getText();
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
@@ -131,12 +131,12 @@ public class Controller {
     public void loadNextQuestion(ActionEvent event) throws IOException {
         removeBackgroundColor();
         questionNumber++;
-        Button subm = (Button)root.lookup("#submit");
+        Button subm = (Button) root.lookup("#submit");
         subm.setVisible(true);
         SecureRandom rand = new SecureRandom();
         int questionID = rand.nextInt(DataRepository.fullPool.size());
         currentQuestion = DataRepository.fullPool.get(questionID);
-        Label questionText = (Label)root.lookup("#question");
+        Label questionText = (Label) root.lookup("#question");
         questionText.setText(currentQuestion.getQuestion());
         correctAnswer = currentQuestion.getAnswers().get(0);
         int questionSelect;
@@ -147,17 +147,13 @@ public class Controller {
             currentQuestion.getAnswers().remove(questionSelect);
         }
         DataRepository.fullPool.remove(questionID);
-        Label questionNo = (Label)root.lookup("#numberOfQuestion");
+        Label questionNo = (Label) root.lookup("#numberOfQuestion");
         questionNo.setText(String.valueOf(questionNumber));
-        if(questionNumber == 11){
+        if (questionNumber == 11) {
             questionNumber = 0;
             switchToEndScene();
         }
-        System.out.println("LOADNEXTQU "+ correctAnswer);
-    }
-
-    public void setRoot(Parent root) {              //provided by ChatGPT https://chat.openai.com/c/9266b52d-4b54-4897-9821-ecad4eb86965
-        this.root = root;
+        System.out.println("LOADNEXTQUSTION" + this);
     }
 
 }

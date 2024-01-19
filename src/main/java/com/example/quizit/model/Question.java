@@ -11,6 +11,7 @@ public class Question {
     private String question;
     private ArrayList<String> answers = new ArrayList<>();
 
+
     public Question() {
     }
 
@@ -21,10 +22,6 @@ public class Question {
         answers.add(wrongAnswer2);
         answers.add(wrongAnswer3);
     }
-
-
-
-
 
 
 
