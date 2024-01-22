@@ -31,6 +31,6 @@
          </children>
       </AnchorPane>
       <Button fx:id="next" layoutX="552.0" layoutY="368.0" mnemonicParsing="false" onAction="#loadNextQuestion" text="Next" />
-      <Button fx:id="submit" layoutX="539.0" layoutY="368.0" mnemonicParsing="false" onAction="#checkAnswer" text="Submit" />
+      <Button fx:id="submit" layoutX="546.0" layoutY="368.0" mnemonicParsing="false" onAction="#checkAnswer" text="Submit" />
    </children>
 </AnchorPane>

@@ -5,6 +5,7 @@ import com.example.quizit.model.Player;
 import com.example.quizit.model.Question;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 
 public class DataRepository {
@@ -13,7 +14,7 @@ public class DataRepository {
     public ArrayList<Question> _questions = new ArrayList<>();
     public List<Player> _players = new ArrayList<>();
 
-    public static ArrayList<Question> fullPool = new ArrayList<>();         //loading questions for the selected categories
+    public static List<Question> fullPool = new LinkedList<>();         //loading questions for the selected categories
 
     public static void LiteratureLoader() {
         Question temp = new Question();
@@ -274,14 +275,6 @@ public class DataRepository {
         temp.getAnswers().add("Kenia");
         temp.getAnswers().add("Nigeria");
         temp.getAnswers().add("Ägypten");
-        fullPool.add(temp);
-
-        temp = new Question();
-        temp.setQuestion("Welches Land wird als das Land der aufgehenden Sonne bezeichnet?");
-        temp.getAnswers().add("Japan");
-        temp.getAnswers().add("China");
-        temp.getAnswers().add("Korea");
-        temp.getAnswers().add("Vietnam");
         fullPool.add(temp);
 
         temp = new Question();

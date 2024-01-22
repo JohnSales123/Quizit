@@ -6,6 +6,7 @@ import com.example.quizit.model.Question;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +17,7 @@ public class QuizitApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizitApplication.class.getResource("WelcomeScene.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 640, 400);
+
         stage.setFullScreen(false);
         stage.setMaximized(false);
         stage.setTitle("Quizit");
@@ -25,6 +27,5 @@ public class QuizitApplication extends Application {
 
     public static void main(String[] args) {
         launch();
-
     }
 }
