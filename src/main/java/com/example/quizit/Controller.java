@@ -19,6 +19,7 @@ public class Controller {
     private String correctAnswer = "";
     private String selectedAnswer = "";
     private int questionNumber = 0;
+    private int pointNumber = 0;
     @FXML
     private Button submit;
     @FXML
@@ -33,6 +34,20 @@ public class Controller {
     private Label question;
     @FXML
     private Label numberOfQuestion;
+    @FXML
+    private CheckBox biology;
+    @FXML
+    private CheckBox geography;
+    @FXML
+    private CheckBox literature;
+    @FXML
+    private CheckBox popCulture;
+    @FXML
+    private CheckBox maths;
+    @FXML
+    private CheckBox history;
+    @FXML
+    private Label points;
     private Button selectedButton;
 
 
@@ -59,7 +74,7 @@ public class Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        DataRepository.geographyLoader();               //TODO: unterschiedliche Kategorien laden je nach Auswahl (mehrere sollen möglich sein)
+        DataRepository.biologyLoader();
         loadNextQuestion(event);
     }
 
@@ -79,6 +94,10 @@ public class Controller {
         answer2.setMouseTransparent(true);
         answer3.setMouseTransparent(true);
         answer4.setMouseTransparent(true);
+
+        if(selectedAnswer.equals(correctAnswer)){
+            pointNumber += 100;
+        }
 
         if (!selectedAnswer.equals(correctAnswer) && selectedButton != null){                      //show correct answer
             selectedButton.setStyle("-fx-background-color: #E08A8A;");
@@ -149,12 +168,14 @@ public class Controller {
     public void loadNextQuestion(ActionEvent event) throws IOException {
         resetQuestionScreen();
         questionNumber++;
+        points.setText(String.valueOf(pointNumber));
 
         SecureRandom rand = new SecureRandom();
         int questionID = rand.nextInt(DataRepository.fullPool.size());                      //randomly choose questions
         Question currentQuestion = DataRepository.fullPool.get(questionID);
-        question.setText(currentQuestion.getQuestion());
         correctAnswer = currentQuestion.getAnswers().get(0);
+        question.setText(currentQuestion.getQuestion());
+        question.setWrapText(true);
         DataRepository.fullPool.remove(questionID);
 
         for (int i = 0; i < 4; i++) {                                                       //randomly assign Answers to buttons
