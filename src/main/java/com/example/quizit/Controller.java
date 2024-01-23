@@ -5,11 +5,8 @@ import com.example.quizit.model.Question;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.scene.*;
+import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -17,13 +14,12 @@ import java.security.SecureRandom;
 
 public class Controller {
     private Stage stage;
-    private Question currentQuestion;
     private Scene scene;
     private static Parent root;
     private String correctAnswer = "";
     private String selectedAnswer = "";
     private int questionNumber = 0;
-    private int correctAnswers = 0;
+    private int pointNumber = 0;
     @FXML
     private Button submit;
     @FXML
@@ -38,11 +34,26 @@ public class Controller {
     private Label question;
     @FXML
     private Label numberOfQuestion;
+    @FXML
+    private CheckBox biology;
+    @FXML
+    private CheckBox geography;
+    @FXML
+    private CheckBox literature;
+    @FXML
+    private CheckBox popCulture;
+    @FXML
+    private CheckBox maths;
+    @FXML
+    private CheckBox history;
+    @FXML
+    private Label points;
+    private Button selectedButton;
 
 
     @FXML
     public void switchToCategories(ActionEvent event) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));               //switching to categories
         root = loader.load();
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
@@ -51,7 +62,7 @@ public class Controller {
     }
 
     @FXML
-    public void switchToQuestionScene(ActionEvent event) throws IOException {
+    public void switchToQuestionScene(ActionEvent event) throws IOException {                               //starting game
         FXMLLoader loader = new FXMLLoader(getClass().getResource("QuestionScreen.fxml"));
         root = loader.load();
         Controller controller = loader.getController();
@@ -63,14 +74,14 @@ public class Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        DataRepository.geographyLoader();          //TODO: unterschiedliche Kategorien laden je nach Auswahl (mehrere sollen möglich sein)
+        DataRepository.biologyLoader();
         loadNextQuestion(event);
     }
 
     @FXML
     public void switchToEndScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScene.fxml"));    //placeholder for End Scene
-        root = loader.load();
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScene.fxml"));    //placeholder for end scene
+        root = loader.load();                                                                     //TODO: ENDSCENE
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
@@ -78,6 +89,19 @@ public class Controller {
 
     public void checkAnswer(ActionEvent event) {
         submit.setVisible(false);
+
+        answer1.setMouseTransparent(true);
+        answer2.setMouseTransparent(true);
+        answer3.setMouseTransparent(true);
+        answer4.setMouseTransparent(true);
+
+        if(selectedAnswer.equals(correctAnswer)){
+            pointNumber += 100;
+        }
+
+        if (!selectedAnswer.equals(correctAnswer) && selectedButton != null){                      //show correct answer
+            selectedButton.setStyle("-fx-background-color: #E08A8A;");
+        }
         if (answer1.getText().equals(correctAnswer)) {
             answer1.setStyle("-fx-background-color: #6DFA76;");
         }
@@ -92,15 +116,22 @@ public class Controller {
         }
     }
 
-    public void removeBackgroundColor() {
+    public void resetQuestionScreen() {
+        submit.setVisible(true);
+        selectedButton = null;
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer4.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
+        answer1.setMouseTransparent(false);
+        answer2.setMouseTransparent(false);
+        answer3.setMouseTransparent(false);
+        answer4.setMouseTransparent(false);
     }
 
     public void saveAnswer1(ActionEvent event) {
         selectedAnswer = answer1.getText();
+        selectedButton = answer1;
         answer1.setStyle("-fx-background-color: #A2C3FA;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
@@ -109,6 +140,7 @@ public class Controller {
 
     public void saveAnswer2(ActionEvent event) {
         selectedAnswer = answer2.getText();
+        selectedButton = answer2;
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: #A2C3FA;");
         answer3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
@@ -117,6 +149,7 @@ public class Controller {
 
     public void saveAnswer3(ActionEvent event) {
         selectedAnswer = answer3.getText();
+        selectedButton = answer3;
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer3.setStyle("-fx-background-color: #A2C3FA;");
@@ -125,6 +158,7 @@ public class Controller {
 
     public void saveAnswer4(ActionEvent event) {
         selectedAnswer = answer4.getText();
+        selectedButton = answer4;
         answer1.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer2.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
         answer3.setStyle("-fx-background-color: transparent; -fx-border-color: black;");
@@ -132,24 +166,34 @@ public class Controller {
     }
 
     public void loadNextQuestion(ActionEvent event) throws IOException {
-        removeBackgroundColor();
+        resetQuestionScreen();
         questionNumber++;
-        submit.setVisible(true);
+        points.setText(String.valueOf(pointNumber));
+
         SecureRandom rand = new SecureRandom();
-        int questionID = rand.nextInt(DataRepository.fullPool.size());
-        currentQuestion = DataRepository.fullPool.get(questionID);
-        question.setText(currentQuestion.getQuestion());
+        int questionID = rand.nextInt(DataRepository.fullPool.size());                      //randomly choose questions
+        Question currentQuestion = DataRepository.fullPool.get(questionID);
         correctAnswer = currentQuestion.getAnswers().get(0);
-        int questionSelect;
-        for (int i = 0; i < 4; i++) {
-            questionSelect = rand.nextInt(4 - i);
-            Button b = (Button) root.lookup("#answer" + (i + 1));
-            b.setText(currentQuestion.getAnswers().get(questionSelect));
-            currentQuestion.getAnswers().remove(questionSelect);
-        }
+        question.setText(currentQuestion.getQuestion());
+        question.setWrapText(true);
         DataRepository.fullPool.remove(questionID);
-        numberOfQuestion.setText(String.valueOf(questionNumber));
-        if (questionNumber == 11) {
+
+        for (int i = 0; i < 4; i++) {                                                       //randomly assign Answers to buttons
+            int answerSelect = rand.nextInt(4 - i);
+            if (i == 0) {
+                answer1.setText(currentQuestion.getAnswers().get(answerSelect));
+            } else if (i == 1) {
+                answer2.setText(currentQuestion.getAnswers().get(answerSelect));
+            } else if (i == 2) {
+                answer3.setText(currentQuestion.getAnswers().get(answerSelect));
+            } else {
+                answer4.setText(currentQuestion.getAnswers().get(answerSelect));
+            }
+            currentQuestion.getAnswers().remove(answerSelect);
+        }
+
+        numberOfQuestion.setText(String.valueOf(questionNumber));                            //add question number
+        if (questionNumber == 11) {                                                          //end after 10 questions
             questionNumber = 0;
             switchToEndScene();
         }
