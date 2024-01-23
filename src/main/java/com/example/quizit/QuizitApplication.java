@@ -1,8 +1,5 @@
 package com.example.quizit;
 
-//import com.example.quizit.model.QAManagement;
-
-import com.example.quizit.model.Question;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

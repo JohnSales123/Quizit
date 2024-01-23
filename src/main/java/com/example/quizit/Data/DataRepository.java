@@ -10,9 +10,6 @@ import java.util.List;
 
 public class DataRepository {
 
-    public List<Answer> _anwsers = new ArrayList<>();
-    public ArrayList<Question> _questions = new ArrayList<>();
-    public List<Player> _players = new ArrayList<>();
 
     public static List<Question> fullPool = new LinkedList<>();         //loading questions for the selected categories
 
