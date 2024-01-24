@@ -11,10 +11,6 @@ import java.util.stream.Collectors;
 
 public class DataRepository {
 
-    public List<Answer> _anwsers = new ArrayList<>();
-    public ArrayList<Question> _questions = new ArrayList<>();
-    public List<Player> _players = new ArrayList<>();
-
     public static ArrayList<Question> fullPool = new ArrayList<>();         //loading questions for the selected categories
 
     private static QuestionLoader questionLoader;

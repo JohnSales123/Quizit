@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="534.0" fitWidth="686.0" layoutX="-56.0" layoutY="-27.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@360_F_350909389_0eKQghmRmBjEcyfg5btbxdTL5v3SlrNc.jpg" />
+         </image>
+      </ImageView>
+      <Text fill="#ff00b2" layoutX="200.0" layoutY="67.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Scoreboard" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="36.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="241.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 1" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="239.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 2" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="239.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 4" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="239.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Player 3" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="377.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="377.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="377.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="377.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Points" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="126.0" layoutY="197.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platz 1:" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="126.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platz 2:" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="126.0" layoutY="257.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platz 3:" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+      <Text fill="#ff00b2" layoutX="126.0" layoutY="287.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Platz 4:" textAlignment="JUSTIFY">
+         <font>
+            <Font name="Bai Jamjuree Bold" size="24.0" />
+         </font>
+      </Text>
+   </children>
+</AnchorPane>

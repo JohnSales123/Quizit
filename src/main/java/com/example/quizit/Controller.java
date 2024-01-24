@@ -56,7 +56,7 @@ public class Controller {
     @FXML
     public void switchToCategories(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));               //switching to categories
-        root = loader.load();
+        root = loader.load();                                                                                //https://kentwynn.com/frontend-libraries/javafx/how-to-change-scenes-in-javafx/kentwynn/14/12/2022/
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
         stage.setScene(scene);
