@@ -45,13 +45,14 @@
             <Font size="18.0" />
           </font>
         </Label>
-            <CheckBox fx:id="maths" layoutX="37.0" layoutY="86.0" mnemonicParsing="false" text="Mathe" />
-            <CheckBox fx:id="history" layoutX="37.0" layoutY="113.0" mnemonicParsing="false" text="Geschichte" />
-            <CheckBox fx:id="geography" layoutX="54.0" layoutY="139.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="79.0" text="Geografie" />
-            <CheckBox fx:id="biology" layoutX="51.0" layoutY="167.0" mnemonicParsing="false" text="Biologie" />
-            <CheckBox fx:id="literature" layoutX="50.0" layoutY="192.0" mnemonicParsing="false" text="Literatur" />
-            <CheckBox fx:id="popCulture" layoutX="44.0" layoutY="224.0" mnemonicParsing="false" text="Popculture" />
-            <Separator layoutX="437.0" layoutY="75.0" orientation="VERTICAL" prefHeight="200.0" />
+          <CheckBox fx:id="maths" layoutX="37.0" layoutY="86.0" mnemonicParsing="false" text="Mathe" />
+          <CheckBox fx:id="history" layoutX="37.0" layoutY="113.0" mnemonicParsing="false" text="Geschichte" />
+          <CheckBox fx:id="geography" layoutX="37.0" layoutY="140.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="79.0" text="Geografie" />
+          <CheckBox fx:id="biology" layoutX="37.0" layoutY="167.0" mnemonicParsing="false" text="Biologie" />
+          <CheckBox fx:id="literature" layoutX="37.0" layoutY="194.0" mnemonicParsing="false" text="Literatur" />
+          <CheckBox fx:id="popCulture" layoutX="37.0" layoutY="221.0" mnemonicParsing="false" text="Popculture" />
+
+          <Separator layoutX="437.0" layoutY="37.0" orientation="VERTICAL" prefHeight="200.0" />
             <ToggleButton layoutX="545.0" layoutY="63.0" mnemonicParsing="false" text="An" />
           <Label alignment="CENTER" layoutX="479.0" layoutY="59.0" style="&#10;" text="Timer" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
               <font>

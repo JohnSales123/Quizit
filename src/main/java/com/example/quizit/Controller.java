@@ -11,6 +11,8 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.List;
 
 import static com.example.quizit.Data.DataRepository.loadQuestionsFromJson;
 
@@ -37,17 +39,17 @@ public class Controller {
     @FXML
     private Label numberOfQuestion;
     @FXML
-    private CheckBox biology;
+    private CheckBox biology = new CheckBox();
     @FXML
-    private CheckBox geography;
+    private CheckBox geography = new CheckBox();
     @FXML
-    private CheckBox literature;
+    private CheckBox literature = new CheckBox();
     @FXML
-    private CheckBox popCulture;
+    private CheckBox popCulture = new CheckBox();
     @FXML
-    private CheckBox maths;
+    private CheckBox maths = new CheckBox();
     @FXML
-    private CheckBox history;
+    private CheckBox history = new CheckBox();
     @FXML
     private Label points;
     private Button selectedButton;
@@ -75,8 +77,29 @@ public class Controller {
         stage.setScene(scene);
         stage.show();
         //DataRepository.biologyLoader();
-        loadQuestionsFromJson();
+        loadQuestionsFromJson(getSelectedTopics());
         loadNextQuestion(event);
+    }
+
+    public List<String> getSelectedTopics(){
+        List<String> ret = new ArrayList<>();
+
+        /*
+        if(biology.isSelected()) { ret.add("biology"); }
+        if(geography.isSelected()){ ret.add("geography"); }
+        if(literature.isSelected()){ ret.add("literature"); }
+        if(popCulture.isSelected()){ ret.add("popCulture"); }
+        if(maths.isSelected()){ret.add("mathe");}
+        if(history.isSelected()){ret.add("history");}
+        */
+        ret.add("biology");
+        ret.add("geography");
+        ret.add("literature");
+        ret.add("popCulture");
+        ret.add("mathe");
+        ret.add("history");
+
+        return ret;
     }
 
     @FXML

@@ -7,6 +7,7 @@ import com.example.quizit.model.Question;
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DataRepository {
 
@@ -14,13 +15,13 @@ public class DataRepository {
     public ArrayList<Question> _questions = new ArrayList<>();
     public List<Player> _players = new ArrayList<>();
 
-    public static List<Question> fullPool = new LinkedList<>();         //loading questions for the selected categories
+    public static ArrayList<Question> fullPool = new ArrayList<>();         //loading questions for the selected categories
 
     private static QuestionLoader questionLoader;
 
-    public static void loadQuestionsFromJson(){
+    public static void loadQuestionsFromJson(List<String> topics){
         questionLoader = new QuestionLoader();
-        fullPool = questionLoader.loadQuestions();
+        fullPool = (ArrayList<Question>) questionLoader.loadQuestions().stream().filter(q -> topics.contains(q.getTopic())).collect(Collectors.toList());
     }
 
     /*
