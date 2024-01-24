@@ -52,6 +52,8 @@ public class Controller {
     private CheckBox history = new CheckBox();
     @FXML
     private Label points;
+    @FXML
+    private Label endPoints;
     private Button selectedButton;
     @FXML
     public void switchToCategories(ActionEvent event) throws IOException {
@@ -109,6 +111,7 @@ public class Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+        endPoints.setText(String.valueOf(pointNumber));
     }
 
     public void checkAnswer(ActionEvent event) {
