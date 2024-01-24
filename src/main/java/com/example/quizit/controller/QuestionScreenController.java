@@ -1,6 +1,5 @@
 package com.example.quizit.controller;
 
-import com.example.quizit.Data.DataRepository;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,7 +16,6 @@ public class QuestionScreenController {
     private Scene scene;
     private Parent root;
 
-    DataRepository data; //Hier werden die daten zur verfügung gestellt
 
 
 
@@ -26,7 +24,6 @@ public class QuestionScreenController {
         // This method is called before the start() method
         // You can use it to prepare your application
 
-        data = new DataRepository();
     }
 
     @FXML

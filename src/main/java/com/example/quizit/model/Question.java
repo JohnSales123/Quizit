@@ -1,29 +1,37 @@
 package com.example.quizit.model;
 
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
 import java.util.ArrayList;
+import java.util.List;
 
-@Data
-@AllArgsConstructor
 public class Question {
+    private String topic;
     private String question;
-    private ArrayList<String> answers = new ArrayList<>();
+    private List<String> anwsers;
 
-
-    public Question() {
-    }
-
-    public Question(String question, String correctAnswer, String wrongAnswer1, String wrongAnswer2, String wrongAnswer3){
+    // Constructor annotated with @JsonCreator
+    @JsonCreator
+    public Question(
+            @JsonProperty("topic") String topic,
+            @JsonProperty("question") String question,
+            @JsonProperty("anwsers") List<String> anwsers) {
+        this.topic = topic;
         this.question = question;
-        answers.add(correctAnswer);
-        answers.add(wrongAnswer1);
-        answers.add(wrongAnswer2);
-        answers.add(wrongAnswer3);
+        this.anwsers = anwsers;
     }
 
 
+    public String getTopic() {
+        return topic;
+    }
+
+    public void setTopic(String topic) {
+        this.topic = topic;
+    }
 
     public String getQuestion() {
         return question;
@@ -33,11 +41,12 @@ public class Question {
         this.question = question;
     }
 
-    public ArrayList<String> getAnswers() {
-        return answers;
+    public List<String> getAnswers() {
+        return anwsers;
     }
 
-    public void setAnswers(ArrayList<String> answers) {
-        this.answers = answers;
+    public void setAnwsers(List<String> options) {
+        this.anwsers = options;
     }
+
 }

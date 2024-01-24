@@ -12,6 +12,8 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.security.SecureRandom;
 
+import static com.example.quizit.Data.DataRepository.loadQuestionsFromJson;
+
 public class Controller {
     private Stage stage;
     private Scene scene;
@@ -49,8 +51,6 @@ public class Controller {
     @FXML
     private Label points;
     private Button selectedButton;
-
-
     @FXML
     public void switchToCategories(ActionEvent event) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("PregameScene.fxml"));               //switching to categories
@@ -74,7 +74,8 @@ public class Controller {
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
-        DataRepository.biologyLoader();
+        //DataRepository.biologyLoader();
+        loadQuestionsFromJson();
         loadNextQuestion(event);
     }
 

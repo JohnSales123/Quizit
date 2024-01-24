@@ -10,10 +10,12 @@ module com.example.quizit {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
     requires lombok;
+    requires com.fasterxml.jackson.databind;
 
 
     opens com.example.quizit to javafx.fxml;
     opens com.example.quizit.controller to javafx.fxml;
 
     exports com.example.quizit;
+    exports com.example.quizit.model;
 }

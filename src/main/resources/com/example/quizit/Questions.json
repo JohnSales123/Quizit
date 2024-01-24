@@ -1,0 +1,405 @@
+{
+  "questions": [
+    {
+      "topic": "literature",
+      "question": "Wer schrieb 'Faust'?",
+      "anwsers": ["Johann Wolfgang von Goethe", "Friedrich Schiller", "Heinrich Heine", "Thomas Mann"]
+    },
+    {
+      "topic": "literature",
+      "question": "In welchem Jahrhundert lebte William Shakespeare?",
+      "anwsers": ["16. Jahrhundert", "17. Jahrhundert", "18. Jahrhundert", "15. Jahrhundert"]
+    },
+    {
+      "topic": "literature",
+      "question": "Wer ist der Autor von 'Der Prozess'?",
+      "anwsers": ["Franz Kafka", "Hermann Hesse", "Thomas Mann", "Friedrich Dürrenmatt"]
+    },
+    {
+      "topic": "literature",
+      "question": "Welcher Roman handelt von der Geschichte eines ehemaligen Sträflings?",
+      "anwsers": ["Der Graf von Monte Christo", "Schuld und Sühne", "Les Misérables", "Die Elenden"]
+    },
+    {
+      "topic": "literature",
+      "question": "Wer schrieb 'Die Räuber'?",
+      "anwsers": ["Friedrich Schiller", "Johann Wolfgang von Goethe", "Heinrich Heine", "Thomas Mann"]
+    },
+    {
+      "topic": "literature",
+      "question": "Welches Buch wird als das meistverkaufte Buch aller Zeiten betrachtet?",
+      "anwsers": ["Die Bibel", "Harry Potter und der Stein der Weisen", "Der Herr der Ringe", "Don Quixote"]
+    },
+    {
+      "topic": "literature",
+      "question": "Welcher Autor erhielt den Literaturnobelpreis für 'Hundert Jahre Einsamkeit'?",
+      "anwsers": ["Gabriel García Márquez", "Isabel Allende", "Pablo Neruda", "Jorge Luis Borges"]
+    },
+    {
+      "topic": "literature",
+      "question": "Wer schrieb 'Der kleine Prinz'?",
+      "anwsers": ["Antoine de Saint-Exupéry", "Hans Christian Andersen", "Oscar Wilde", "Jules Verne"]
+    },
+    {
+      "topic": "literature",
+      "question": "In welchem Jahr wurde William Shakespeare geboren?",
+      "anwsers": ["1564", "1589", "1601", "1623"]
+    },
+    {
+      "topic": "literature",
+      "question": "Was ist der bekannteste Roman von Hermann Hesse?",
+      "anwsers": ["Siddhartha", "Steppenwolf", "Demian", "Der Glasperlenspieler"]
+    },
+    {
+      "topic": "history",
+      "question": "Wann wurde die Berliner Mauer errichtet?",
+      "anwsers": ["1961", "1945", "1955", "1971"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der erste Präsident der Vereinigten Staaten?",
+      "anwsers": ["George Washington", "Thomas Jefferson", "John Adams", "James Madison"]
+    },
+    {
+      "topic": "history",
+      "question": "Welcher Krieg wurde als 'der Große Krieg' bekannt?",
+      "anwsers": ["Erster Weltkrieg", "Zweiter Weltkrieg", "Kalter Krieg", "Golfkrieg"]
+    },
+    {
+      "topic": "history",
+      "question": "In welchem Jahr endete der Dreißigjährige Krieg?",
+      "anwsers": ["1648", "1618", "1703", "1765"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der Führer der Sowjetunion während des Zweiten Weltkriegs?",
+      "anwsers": ["Joseph Stalin", "Nikita Chruschtschow", "Leonid Breschnew", "Mikhail Gorbatschow"]
+    },
+    {
+      "topic": "history",
+      "question": "Wann wurde die Magna Carta unterzeichnet?",
+      "anwsers": ["1215", "1342", "1492", "1620"]
+    },
+    {
+      "topic": "history",
+      "question": "Welche Stadt war im Mittelalter als 'Konstantinopel' bekannt?",
+      "anwsers": ["Istanbul", "Roma", "Athens", "Cairo"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der erste Mensch, der die Reise um die Welt vollendete?",
+      "anwsers": ["Ferdinand Magellan", "Marco Polo", "Christopher Columbus", "James Cook"]
+    },
+    {
+      "topic": "history",
+      "question": "In welchem Jahr wurde die Unabhängigkeit der Vereinigten Staaten erklärt?",
+      "anwsers": ["1776", "1789", "1804", "1832"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der Architekt des Eiffelturms in Paris?",
+      "anwsers": ["Gustave Eiffel", "Antoni Gaudí", "Le Corbusier", "Frank Gehry"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Formel für die Berechnung der kinematischen Energie?",
+      "anwsers": ["E = ½mv²", "E = mc²", "F = ma", "P = VI"]
+    },
+    {
+      "topic": "physics",
+      "question": "Welche Einheit wird für die Messung von elektrischem Widerstand verwendet?",
+      "anwsers": ["Ohm", "Watt", "Volt", "Ampere"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Einheit der elektrischen Ladung?",
+      "anwsers": ["Coulomb", "Ampere", "Ohm", "Volt"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die dritte newtonsche Bewegungsgesetz?",
+      "anwsers": ["Aktion und Reaktion", "Gleichgewicht", "Beschleunigung", "Inertia"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Lichtgeschwindigkeit in einem Vakuum?",
+      "anwsers": ["300,000 km/s", "150,000 km/s", "500,000 km/s", "1,000,000 km/s"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Formel für die Beschleunigung aufgrund der Schwerkraft?",
+      "anwsers": ["a = F/m", "F = ma", "E = mc²", "P = VI"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Einheit der Arbeit in der Physik?",
+      "anwsers": ["Joule", "Newtonmeter", "Watt", "Volt"]
+    },
+    {
+      "topic": "physics",
+      "question": "Welche Farbe hat ein Körper, wenn er alle Farben absorbiert?",
+      "anwsers": ["Schwarz", "Rot", "Blau", "Weiß"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Einheit der Frequenz?",
+      "anwsers": ["Hertz", "Watt", "Joule", "Volt"]
+    },
+    {
+      "topic": "physics",
+      "question": "Was ist die Formel für die elektrische Leistung?",
+      "anwsers": ["P = IV", "E = mc²", "F = ma", "P = V²/R"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Summe der Innenwinkel eines Dreiecks?",
+      "anwsers": ["180 Grad", "90 Grad", "120 Grad", "360 Grad"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist der Satz des Pythagoras?",
+      "anwsers": ["a² + b² = c²", "a² = b² + c²", "a + b = c", "a = b + c"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist der Durchmesser eines Kreises in Bezug auf den Radius?",
+      "anwsers": ["Durchmesser = 2 * Radius", "Durchmesser = Radius / 2", "Durchmesser = Radius", "Durchmesser = 3 * Radius"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Ableitung von x^2?",
+      "anwsers": ["2x", "x", "1", "0"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Fläche eines Rechtecks mit Länge 5 und Breite 8?",
+      "anwsers": ["40", "13", "26", "56"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Summe der ersten 10 natürlichen Zahlen?",
+      "anwsers": ["55", "45", "65", "75"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Quadratwurzel von 25?",
+      "anwsers": ["5", "3", "7", "25"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Gleichung einer Geraden in der Form y = mx + b?",
+      "anwsers": ["Steigung-Intercept-Form", "Punkt-Steigungsform", "Scheitelpunktform", "Allgemeine Form"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist der Logarithmus von 100 zur Basis 10?",
+      "anwsers": ["2", "1", "10", "1000"]
+    },
+    {
+      "topic": "math",
+      "question": "Was ist die Formel für den Umfang eines Kreises?",
+      "anwsers": ["U = 2πr", "U = πr", "U = πd", "U = 2πd"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Wer ist bekannt als 'King of Pop'?",
+      "anwsers": ["Michael Jackson", "Elvis Presley", "Prince", "Madonna"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welcher Film gewann den Oscar als Bester Film im Jahr 1994?",
+      "anwsers": ["Forrest Gump", "Titanic", "Schindler's List", "The Silence of the Lambs"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welches Album ist das meistverkaufte aller Zeiten?",
+      "anwsers": ["Thriller", "The Dark Side of the Moon", "Abbey Road", "Back in Black"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Wer ist die Hauptfigur in der Harry Potter-Buchreihe?",
+      "anwsers": ["Harry Potter", "Ron Weasley", "Hermione Granger", "Draco Malfoy"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welcher Künstler malte die Mona Lisa?",
+      "anwsers": ["Leonardo da Vinci", "Vincent van Gogh", "Pablo Picasso", "Michelangelo"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Wer ist der Regisseur des Films 'Inception'?",
+      "anwsers": ["Christopher Nolan", "Quentin Tarantino", "Steven Spielberg", "Martin Scorsese"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welcher Schauspieler spielt die Hauptrolle in 'The Matrix'?",
+      "anwsers": ["Keanu Reeves", "Brad Pitt", "Tom Cruise", "Leonardo DiCaprio"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Wer ist die Autorin der 'Harry Potter'-Buchreihe?",
+      "anwsers": ["J.K. Rowling", "George R.R. Martin", "J.R.R. Tolkien", "Stephen King"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welche Band ist für Hits wie 'Bohemian Rhapsody' und 'We Will Rock You' bekannt?",
+      "anwsers": ["Queen", "The Rolling Stones", "The Beatles", "Led Zeppelin"]
+    },
+    {
+      "topic": "popculture",
+      "question": "Welche Serie basiert auf den Büchern von George R.R. Martin?",
+      "anwsers": ["Game of Thrones", "Breaking Bad", "The Sopranos", "Stranger Things"]
+    },
+    {
+      "topic": "geography",
+      "question": "Was ist die Hauptstadt von Frankreich?",
+      "anwsers": ["Paris", "Berlin", "Madrid", "London"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welches Land liegt südlich von Ägypten?",
+      "anwsers": ["Sudan", "Libyen", "Algerien", "Kenia"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welcher Fluss fließt durch Rom?",
+      "anwsers": ["Tiber", "Seine", "Themse", "Donau"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welcher Ozean liegt östlich von Australien?",
+      "anwsers": ["Pazifischer Ozean", "Atlantischer Ozean", "Indischer Ozean", "Arktischer Ozean"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welches Land liegt auf der Iberischen Halbinsel?",
+      "anwsers": ["Spanien", "Italien", "Griechenland", "Portugal"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welcher Berg ist der höchste der Welt?",
+      "anwsers": ["Mount Everest", "K2", "Kangchenjunga", "Lhotse"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welcher Kontinent liegt südlich von Europa?",
+      "anwsers": ["Afrika", "Asien", "Australien", "Nordamerika"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welches Land hat die meisten Einwohner auf der Welt?",
+      "anwsers": ["China", "Indien", "USA", "Russland"]
+    },
+    {
+      "topic": "geography",
+      "question": "In welchem Land befindet sich die Sahara-Wüste?",
+      "anwsers": ["Ägypten", "Südafrika", "Nigeria", "Marokko"]
+    },
+    {
+      "topic": "geography",
+      "question": "Welcher Fluss ist der längste der Welt?",
+      "anwsers": ["Nil", "Amazonas", "Jangtsekiang", "Mississippi"]
+    },
+    {
+      "topic": "biology",
+      "question": "Was ist der Hauptbestandteil der Zellmembran?",
+      "anwsers": ["Lipide", "Proteine", "Kohlenhydrate", "Nukleinsäuren"]
+    },
+    {
+      "topic": "biology",
+      "question": "Welches Organ ist für die Produktion von Insulin verantwortlich?",
+      "anwsers": ["Bauchspeicheldrüse", "Leber", "Niere", "Herz"]
+    },
+    {
+      "topic": "biology",
+      "question": "Welches Tier ist für die Verbreitung von Malaria verantwortlich?",
+      "anwsers": ["Mücke", "Fliege", "Kakerlake", "Floh"]
+    },
+    {
+      "topic": "biology",
+      "question": "Was ist der größte Teil des menschlichen Gehirns?",
+      "anwsers": ["Cerebrum", "Hippocampus", "Hypothalamus", "Medulla oblongata"]
+    },
+    {
+      "topic": "biology",
+      "question": "Welches Vitamin wird durch Sonneneinstrahlung in der Haut produziert?",
+      "anwsers": ["Vitamin D", "Vitamin A", "Vitamin C", "Vitamin K"]
+    },
+    {
+      "topic": "biology",
+      "question": "Was ist der kleinste Knochen im menschlichen Körper?",
+      "anwsers": ["Stapes", "Femur", "Humerus", "Tibia"]
+    },
+    {
+      "topic": "biology",
+      "question": "Welche Blutzellen sind für die Sauerstofftransport im Körper verantwortlich?",
+      "anwsers": ["Erythrozyten", "Leukozyten", "Thrombozyten", "Plasmozyten"]
+    },
+    {
+      "topic": "biology",
+      "question": "Was ist der Unterschied zwischen Mitose und Meiose?",
+      "anwsers": ["Mitose führt zu zwei identischen Tochterzellen, Meiose zu vier unterschiedlichen Tochterzellen", "Mitose führt zu haploiden Zellen, Meiose zu diploiden Zellen", "Mitose führt zu genetisch unterschiedlichen Zellen, Meiose zu identischen Zellen", "Mitose führt zu sexuellen Zellen, Meiose zu somatischen Zellen"]
+    },
+    {
+      "topic": "biology",
+      "question": "Welches Organ ist für die Produktion von roten Blutkörperchen verantwortlich?",
+      "anwsers": ["Knochenmark", "Leber", "Niere", "Lunge"]
+    },
+    {
+      "topic": "biology",
+      "question": "Was ist der Hauptbestandteil von Pflanzenzellen?",
+      "anwsers": ["Zellwand", "Mitochondrien", "Zellkern", "Ribosomen"]
+    },
+    {
+      "topic": "history",
+      "question": "Welches Ereignis markiert das Ende des Zweiten Weltkriegs?",
+      "anwsers": ["Hiroshima und Nagasaki", "D-Day", "Battle of Stalingrad", "Pearl Harbor"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der erste Präsident der Vereinigten Staaten?",
+      "anwsers": ["George Washington", "Thomas Jefferson", "John Adams", "James Madison"]
+    },
+    {
+      "topic": "history",
+      "question": "Welches antike Weltwunder existiert noch heute?",
+      "anwsers": ["Pyramiden von Gizeh", "Hängende Gärten von Babylon", "Zeusstatue in Olympia", "Tempel der Artemis in Ephesos"]
+    },
+    {
+      "topic": "history",
+      "question": "Wann endete der Dreißigjährige Krieg?",
+      "anwsers": ["1648", "1618", "1701", "1776"]
+    },
+    {
+      "topic": "history",
+      "question": "Welche berühmte Rede hielt Martin Luther King Jr.?",
+      "anwsers": ["I Have a Dream", "Give Me Liberty or Give Me Death", "We Shall Fight on the Beaches", "Ich bin ein Berliner"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der erste Mensch im Weltraum?",
+      "anwsers": ["Yuri Gagarin", "Neil Armstrong", "Buzz Aldrin", "Alan Shepard"]
+    },
+    {
+      "topic": "history",
+      "question": "Welcher Krieg wird als 'Großer Vaterländischer Krieg' in Russland bezeichnet?",
+      "anwsers": ["Zweiter Weltkrieg", "Erster Weltkrieg", "Kalter Krieg", "Russisch-Osmanischer Krieg"]
+    },
+    {
+      "topic": "history",
+      "question": "Welches Ereignis führte zur Unabhängigkeit der Vereinigten Staaten von Amerika?",
+      "anwsers": ["Declaration of Independence", "Boston Tea Party", "Emancipation Proclamation", "Gettysburg Address"]
+    },
+    {
+      "topic": "history",
+      "question": "Wer war der erste Mensch auf dem Mond?",
+      "anwsers": ["Neil Armstrong", "Buzz Aldrin", "Yuri Gagarin", "Michael Collins"]
+    },
+    {
+      "topic": "history",
+      "question": "Welcher Kaiser regierte während der Pax Romana?",
+      "anwsers": ["Augustus", "Julius Caesar", "Nero", "Trajan"]
+    }
+  ]
+}
+
