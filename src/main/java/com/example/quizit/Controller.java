@@ -104,8 +104,8 @@ public class Controller {
 
     @FXML
     public void switchToEndScene() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("WelcomeScene.fxml"));    //placeholder for end scene
-        root = loader.load();                                                                     //TODO: ENDSCENE
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("GameOver.fxml"));
+        root = loader.load();
         scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

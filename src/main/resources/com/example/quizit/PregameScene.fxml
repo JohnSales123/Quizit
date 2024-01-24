@@ -32,68 +32,42 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 -->
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.CheckBox?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.ToggleButton?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.quizit.Controller">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="437.0" prefWidth="975.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
       <children>
-            <ImageView fitHeight="419.0" fitWidth="1033.0" layoutX="-32.0" layoutY="-6.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/AdobeStock_677233273.jpeg" />
-               </image>
-            </ImageView>
-        <Label alignment="CENTER" layoutX="136.0" layoutY="147.0" style="&#10;" text="Kategorien" textAlignment="CENTER" textFill="#54c2ff" wrapText="false">
+        <ImageView fitHeight="600.0" fitWidth="728.0" layoutX="-41.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+          <image>
+            <Image url="@../../../PreGameScreen.jpg" />
+          </image>
+        </ImageView>
+        <Label alignment="CENTER" layoutX="39.0" layoutY="60.0" style="&#10;" text="Kategorien" textAlignment="CENTER" textFill="#FFFFFF" wrapText="false">
           <font>
-            <Font size="48.0" />
+            <Font size="18.0" />
           </font>
         </Label>
-            <CheckBox fx:id="maths" layoutX="603.0" layoutY="121.0" mnemonicParsing="false" text="Mathe" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font></CheckBox>
+          <CheckBox fx:id="maths" layoutX="37.0" layoutY="86.0" mnemonicParsing="false" text="Mathe" textFill="#FFFFFF"/>
+          <CheckBox fx:id="history" layoutX="37.0" layoutY="113.0" mnemonicParsing="false" text="Geschichte" textFill="#FFFFFF"/>
+          <CheckBox fx:id="geography" layoutX="37.0" layoutY="140.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="79.0" text="Geografie" textFill="#FFFFFF"/>
+          <CheckBox fx:id="biology" layoutX="37.0" layoutY="167.0" mnemonicParsing="false" text="Biologie" textFill="#FFFFFF"/>
+          <CheckBox fx:id="literature" layoutX="37.0" layoutY="194.0" mnemonicParsing="false" text="Literatur" textFill="#FFFFFF"/>
+          <CheckBox fx:id="popCulture" layoutX="37.0" layoutY="221.0" mnemonicParsing="false" text="Popculture" textFill="#FFFFFF"/>
 
-            <CheckBox fx:id="history" layoutX="626.0" layoutY="174.0" mnemonicParsing="false" text="Geschichte" textFill="WHITE">
-               <font>
-                  <Font name="System Bold Italic" size="18.0" />
-               </font></CheckBox>
-            <CheckBox fx:id="geography" layoutX="603.0" layoutY="229.0" mnemonicParsing="false" prefHeight="24.0" prefWidth="109.0" text="Geografie" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font></CheckBox>
-            <CheckBox fx:id="biology" layoutX="781.0" layoutY="184.0" mnemonicParsing="false" text="Biologie" textFill="WHITE">
-               <font>
-                  <Font name="System Bold Italic" size="18.0" />
-               </font></CheckBox>
-            <ToggleButton layoutX="369.0" layoutY="341.0" mnemonicParsing="false" style="-fx-background-color: #00000;" text="An">
-               <font>
-                  <Font size="18.0" />
-               </font></ToggleButton>
-            <CheckBox fx:id="literature" layoutX="747.0" layoutY="134.0" mnemonicParsing="false" text="Literatur" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font></CheckBox>
-          <Label alignment="CENTER" layoutX="288.0" layoutY="344.0" style="&#10;" text="Timer" textAlignment="CENTER" textFill="WHITE" wrapText="false">
+          <Separator layoutX="325.0" layoutY="37.0" orientation="VERTICAL" prefHeight="200.0" />
+            <ToggleButton layoutX="545.0" layoutY="63.0" mnemonicParsing="false" text="An" />
+          <Label alignment="CENTER" layoutX="479.0" layoutY="59.0" style="&#10;" text="Timer" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
               <font>
-                  <Font name="System Bold Italic" size="24.0" />
+                  <Font size="18.0" />
               </font>
           </Label>
-          <Button fx:id="startGameCat" layoutX="545.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToQuestionScene" text="Start game" textFill="#349938">
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
-            <CheckBox fx:id="literature1" layoutX="726.0" layoutY="241.0" mnemonicParsing="false" text="Popculture" textFill="WHITE">
-               <font>
-                  <Font name="System Bold" size="18.0" />
-               </font></CheckBox>
+          <Button fx:id="startGameCat" layoutX="545.0" layoutY="339.0" mnemonicParsing="false" onAction="#switchToQuestionScene" text="Start game" />
+
       </children>
     </AnchorPane>
   </children>

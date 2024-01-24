@@ -13,7 +13,7 @@ public class QuizitApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(QuizitApplication.class.getResource("WelcomeScene.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 640, 400);
+        Scene scene = new Scene(fxmlLoader.load(), 685, 420);
 
         stage.setFullScreen(false);
         stage.setMaximized(false);

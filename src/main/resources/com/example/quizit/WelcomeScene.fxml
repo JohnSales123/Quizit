@@ -15,38 +15,38 @@
     <children>
         <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="346.0" prefWidth="640.0" VBox.vgrow="ALWAYS">
             <children>
-            <ImageView fitHeight="437.0" fitWidth="728.0" layoutX="-41.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../../../../../Downloads/360_F_478352239_ckoEVDJZX54tvAzxpL3F7UOr2qoXx0wV.jpg" />
-               </image>
-            </ImageView>
+                <ImageView fitHeight="600.0" fitWidth="728.0" layoutX="-41.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../../../WelcomeSceneBackround.jpg" />
+                    </image>
+                </ImageView>
                 <Label alignment="CENTER" layoutX="195.0" layoutY="112.0" style="&#10;" text="Willkommen bei Quizit!" textAlignment="CENTER" textFill="#78e9ff" wrapText="false">
                     <font>
                         <Font size="36.0" />
                     </font>
-               <effect>
-                  <Glow />
-               </effect>
+                    <effect>
+                        <Glow />
+                    </effect>
                 </Label>
                 <ButtonBar layoutX="235.0" layoutY="200.0">
                     <effect>
                         <Blend />
                     </effect>
                 </ButtonBar>
-          <Button fx:id="startGameWelc" layoutX="224.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="49.0" prefWidth="289.0" style="-fx-background-color: #181B45; -fx-background-radius: 100;" text="Spiel starten" textFill="#ff009d">
-               <effect>
-                  <Glow />
-               </effect>
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
-                  <Button fx:id="ScoreBoardWelc" layoutX="224.0" layoutY="179.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="289.0" style="-fx-background-color: #181B45; -fx-background-radius: 100;" text="Scoreboard" textAlignment="CENTER" textFill="#ff009d">
-               <effect>
-                  <Glow />
-               </effect>
-               <font>
-                  <Font size="18.0" />
-               </font></Button>
+                <Button fx:id="startGameWelc" layoutX="224.0" layoutY="246.0" mnemonicParsing="false" onAction="#switchToCategories" prefHeight="49.0" prefWidth="289.0" style="-fx-background-color: #181B45; -fx-background-radius: 100;" text="Spiel starten" textFill="#ff009d">
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <Button fx:id="ScoreBoardWelc" layoutX="224.0" layoutY="179.0" mnemonicParsing="false" prefHeight="49.0" prefWidth="289.0" style="-fx-background-color: #181B45; -fx-background-radius: 100;" text="Scoreboard" textAlignment="CENTER" textFill="#ff009d">
+                    <effect>
+                        <Glow />
+                    </effect>
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
             </children>
         </AnchorPane>
     </children>
